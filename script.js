@@ -27,7 +27,7 @@ function animate(moves) {
     showBars(move);
     setTimeout(() => {
         animate(moves);
-    }, 300);
+    }, 100);
 }
 
 function bubbleSort(array) {
@@ -38,9 +38,7 @@ function bubbleSort(array) {
             moves.push({
                 indices: [i - 1, i], type: "comp"
             });
-            moves.push({
-                indices: [i - 1, i], type: "swap"
-            });
+
             if (array[i - 1] > array[i]) {
                 swapped = true;
                 moves.push({
